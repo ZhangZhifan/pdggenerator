@@ -1,0 +1,12 @@
+digraph G{
+Node6[shape=record label="{6: While\ a\ \<\ 10}" rank=3];
+Node8[shape=record label="{8: If\ a\ %\ 2}"];
+Node10[shape=record label="{10: Assign\ b\ =\ b\ +\ 2}"];
+Node11[shape=record label="{11: Assign\ b\ =\ b\ +\ 1}"];
+Node6->Node8;
+Node6->Node11;
+Node8->Node10;
+Node10->Node11 [style = dotted];
+Node11->Node10 [style = dotted];
+Node11->Node11 [style = dotted];
+}

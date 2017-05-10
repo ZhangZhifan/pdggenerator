@@ -1,0 +1,16 @@
+digraph G{
+Node1[shape=record label="{1: ENTRY\ |IN: |OUT: |def: |use: }"];
+Node2[shape=record label="{2: Function\ void\ main()|IN: |OUT: |def: |use: }"];
+Node4[shape=record label="{4: Decl\ int\ a\ =\ 10|IN: |OUT: 4|def: a|use: }"];
+Node5[shape=record label="{5: Decl\ int\ b\ =\ 5|IN: 4|OUT: 5, 4|def: b|use: }"];
+Node6[shape=record label="{6: If\ a\ \<\ b|IN: 5, 4|OUT: 5, 4|def: |use: a, b}"];
+Node8[shape=record label="{8: printf(\"%d\",\ b)|IN: 5, 4|OUT: 5, 4|def: |use: b}"];
+Node1->Node2;
+Node2->Node4;
+Node2->Node5;
+Node2->Node6;
+Node6->Node8;
+Node4->Node6 [style = dotted];
+Node5->Node6 [style = dotted];
+Node5->Node8 [style = dotted];
+}
